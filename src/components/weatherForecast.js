@@ -6,7 +6,7 @@ export function WeatherAt({location}) {
         <img src={"http://openweathermap.org/images/flags/" + location.city.country.toLowerCase() + ".png"} />
         <b>{location.city.name}, {location.city.hasOwnProperty('state')? location.city.state + ', ': ''} {location.city.country}</b>
         <b><i>{location.forecast.weather[0].descriptionn}</i></b>
-        <p>Temperature <span>{location.forecast.main.temp}° </span> (ranging from {location.forecast.main.temp_min}° to {location.forecast.main.temp_min}°), feels like {location.forecast.main.feels_like}°</p>
+        <p>Temperature <span>{location.forecast.main.temp}° </span> (ranging from {location.forecast.main.temp_min}° to {location.forecast.main.temp_max}°), feels like {location.forecast.main.feels_like}°</p>
         <p>Geo coords [{location.city.lat}, {location.city.lon}]</p>
       </td>
     </tr>      
